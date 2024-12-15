@@ -1,0 +1,23 @@
+/* Overwrite in your /assets/css/custom.css file */
+
+.card {
+--bs-border-width: 3px;
+--bs-border-color: #0d3d6d;
+--bs-border-color-translucent: rgba(0, 0, 0, 0.75);
+--bs-border-radius: 0.5rem;
+}
+
+.card.microposts {
+  --bs-border-width: 2px;
+  --bs-border-color-translucent: rgba(32, 14, 186, 0.75);
+  --bs-border-radius: 0.5rem;
+  background-color: whitesmoke;
+  }
+  
+.nav-item {
+  margin-top: 7px;
+}
+
+.navbar-light .row {
+  color: black;
+}

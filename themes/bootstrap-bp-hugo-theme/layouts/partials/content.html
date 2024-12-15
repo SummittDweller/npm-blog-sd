@@ -1,0 +1,11 @@
+{{ `<!-- hugo: themes/bootstrap-bp-hugo-theme/layouts/partials/content.html -->` | safeHTML }}
+<div class="card">
+    {{ .Scratch.Set "fullsize" true }}
+    {{- partial "content_card_header.html" . -}}
+
+    {{ .Scratch.Set "showPostSummary" false }}
+    {{- partial "content_card_body.html" . -}}
+
+    {{- partial "content_card_footer.html" . -}}
+</div>
+{{ `<!-- /hugo: themes/bootstrap-bp-hugo-theme/layouts/partials/content.html -->` | safeHTML }}

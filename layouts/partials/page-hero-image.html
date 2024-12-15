@@ -1,0 +1,45 @@
+<!-- MAM adding hero image to header.  13-Oct-2024 -->
+
+<style>
+  /* Container holding the image and the text */
+  .container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+  /* Centered text */
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } 
+
+  /* Large BOLD text */
+  .large-bold {
+    font-size: 3em;
+    font-weight: bold;
+    text-shadow: rgb(16, 16, 16) 0 0 20px;
+  } 
+
+  /* Normal text */
+  .normal {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-shadow: rgb(16, 16, 16) 0px 0 10px;
+  } 
+
+</style>
+
+<div class="container" style="margin: 1em 0;">
+  <center>
+    <a class="link-primary" href="https://blog.summittservices.com/"></a>
+      <img class="card-img-top card" src="/images/hero-main.jpg"></img>
+      <div class="centered">
+        <p class="large-bold">{{ .Site.Title }}</p> 
+        <p class="normal">{{ .Site.Params.Description }} </p>
+      </div>  
+    </a>
+  </center>
+</div>

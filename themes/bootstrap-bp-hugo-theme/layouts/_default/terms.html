@@ -1,0 +1,33 @@
+{{ define "main" }}
+{{ `<!-- hugo: themes/bootstrap-bp-hugo-theme/layouts/_default/terms.html -->` | safeHTML }}
+
+<div class="container mt-3 mb-3">
+    <div class="mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h1>{{ i18n .Title }}</h1>
+                {{ range $key, $value := .Data.Terms }}
+                    <a href="#{{ $key | urlize }}" class="badge bg-primary"><span>{{ $value.Page.Title }}</span> <span class="badge bg-dark">{{ $value.Count }}</span></a>
+                {{ end}}
+            </div>
+        </div>
+    </div>
+
+    {{ range $key, $value := .Data.Terms }}
+        <div class="mb-3">
+            <div class="card">
+                        <div class="card-body">
+                    <h2 id="{{ $key | urlize }}">{{ $value.Page.Title }}</h2>
+                    <ul>
+                        {{ range $value.Pages.ByDate.Reverse }}
+                            <li><a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a></li>
+                        {{ end}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    {{ end}}
+</div>
+
+{{ `<!-- /hugo: themes/bootstrap-bp-hugo-theme/layouts/_default/terms.html -->` | safeHTML }}
+{{ end }}

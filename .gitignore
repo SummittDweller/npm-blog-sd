@@ -1,0 +1,40 @@
+# website build is excluded
+public/
+build/
+
+# =========================
+# Operating System Files
+# =========================
+
+# OSX
+# =========================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# For Pagefind per UPDATE, 2021-07-31 in https://www.brycewray.com/posts/2022/07/pagefind-quite-find-site-search/
+static/_pagefind
+
+# This is now an NPM project, do NOT commit the `node_modules` directory!  It's enormous, and it gets rebuilt all the time.
+node_modules/
+
+# PDFs.... too big and bulky for GitHub
+*.pdf
+
+# .env... NEVER save these!
+.env*

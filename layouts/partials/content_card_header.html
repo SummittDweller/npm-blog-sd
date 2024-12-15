@@ -1,0 +1,20 @@
+{{ `<!-- hugo: layouts/partials/content_card_header.html -->` | safeHTML }}
+{{ if and (eq .Type "video") (not .Site.Config.Privacy.YouTube.Disable) }} 
+    <div class="w-100">
+        {{ if .Scratch.Get "fullsize" }}
+            <iframe src="https://www.youtube-nocookie.com/embed/{{ .Params.youtube }}?rel=0" width="100%" height="600px" frameborder="0" allowfullscreen></iframe>
+        {{ else }}
+            <iframe src="https://www.youtube-nocookie.com/embed/{{ .Params.youtube }}?rel=0" width="100%" height="200px" frameborder="0" allowfullscreen></iframe>
+        {{ end }}
+    </div>
+{{ else if eq .Type "audio" }}
+    <div class="w-100">
+        <iframe src="https://open.spotify.com/embed?uri={{ .Params.spotify }}" width="100%" height="80" frameborder="0" allowtransparency="true"></iframe>
+    </div>
+{{ else }}
+    {{ $sitetitle := (.Title) }}
+    {{ if $.Params.hero_image }}
+        <img class="card-img-top" src="{{ $.Params.hero_image }}" alt="{{ $sitetitle }}" title="{{ $sitetitle }}">
+    {{ end }}
+{{ end }}
+{{ `<!-- /hugo: layouts/partials/content_card_header.html -->` | safeHTML }}
