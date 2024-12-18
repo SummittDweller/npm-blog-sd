@@ -81,7 +81,16 @@ I can simply push changes to the `main` branch of the `npm-blog-sd` repo to trig
 
 # Errors?
 
-So, it took lots of trial-and-error to get the Azure configuration straight.  First there were issues with deployment tokens, so I rewound the project and got that fixed.  Then, since this blog uses SASS I needed to run the `extended` version of Hugo, or more specifically, `hugo-bin-extended`.   I fixed that, apparently, with the addition of...
+So, it took lots of trial-and-error to get the Azure configuration straight.  First there were issues with deployment tokens, so I rewound the project and got that fixed.  Then, since this blog uses SASS I needed to run the `extended` version of Hugo, or more specifically, `hugo-bin-extended`.   I fixed that, apparently, with the addition of...  
+
+```
+  "dependencies": {
+    "hugo-bin-extended": "latest",
+    "pagefind": "^1.2.0"
+  }
+```
+
+...in `package.json`.  That `hugo-bin-extended` key replaced `hugo-bin` and I set the version to `latest`.   
 
 ## Last of the Errors?
 
@@ -99,9 +108,9 @@ This [post](https://stackoverflow.com/a/5542964) was very helpful for working wi
 
 # Success!
 
-Well, somewhat.  My site at https://ashy-rock-0f18efc0f.4.azurestaticapps.net/ is visible now, but the theme isn't right.  I suspect that is because my `hugo.yml` file still sets the `baseURL` to "https://blog.summittdweller.com" and we are not quite there yet.  Setting the `baseURL` to "https://ashy-rock-0f18efc0f.4.azurestaticapps.net/" and let's see what happens...  
+Well, somewhat.  My site at https://ashy-rock-0f18efc0f.4.azurestaticapps.net/ is visible now, but the theme isn't right.  I suspect that is because my `hugo.yml` file still sets the `baseURL` to "https://blog.summittdweller.com" and we are not quite there yet.  Setting the `baseURL` to "https://ashy-rock-0f18efc0f.4.azurestaticapps.net/" and let's see what happens...  **Bingo!**   Now, I just need to add a search bar to expose the Pagefind results.   
 
-> What follows is obsolete, it's from `npm-rootstalk`, and does NOT apply to this blog!
+{{< attention-box "What follows is obsolete, it's from `npm-rootstalk`, and does NOT apply to this blog!" >}}
 
 # A New Production Branch
 
