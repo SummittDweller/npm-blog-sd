@@ -17,7 +17,7 @@
   "author": "Mark A. McFate",
   "license": "ISC",
   "dependencies": {
-    "hugo-bin-extended": "^0.137.0",
+    "hugo-bin-extended": "latest",
     "pagefind": "^1.2.0"
   }
 }
