@@ -10,7 +10,7 @@ copyright: Mark McFate
 enableRobotsTXT: true
 pygmentsCodeFences: true
 canonifyurls: true
-paginate: 6
+pagination.pagerSize: 6
 theme: bootstrap-bp-hugo-theme
 
 sitemap:

@@ -79,6 +79,25 @@ Now I just use `npm run serve` to build the Hugo site, index it with Pagefind, a
 
 I can simply push changes to the `main` branch of the `npm-blog-sd` repo to trigger an Azure (aka GitHub Actions) rebuild, indexing and deployment of the site to [this address](https://ashy-rock-0f18efc0f.4.azurestaticapps.net).
 
+# Errors?
+
+So, it took lots of trial-and-error to get the Azure configuration straight.  First there were issues with deployment tokens, so I rewound the project and got that fixed.  Then, since this blog uses SASS I needed to run the `extended` version of Hugo, or more specifically, `hugo-bin-extended`.   I fixed that, apparently, with the addition of...
+
+## Last of the Errors?
+
+The changes mentioned above left me with two deprecation errors...  
+
+```
+ERROR deprecated: site config key paginate was deprecated in Hugo v0.128.0 and will be removed in Hugo 0.141.0. Use pagination.pagerSize instead.
+WARN  Raw HTML omitted while rendering "/github/workspace/content/about.md"; see https://gohugo.io/getting-started/configuration-markup/#rendererunsafe
+You can suppress this warning by adding the following to your site configuration:
+ignoreLogs = ['warning-goldmark-raw-html']
+ERROR deprecated: .Site.Social was deprecated in Hugo v0.124.0 and will be removed in Hugo 0.141.0. Implement taxonomy 'social' or use .Site.Params.Social instead.
+```
+
+
+
+
 > What follows is obsolete, it's from `npm-rootstalk`, and does NOT apply to this blog!
 
 # A New Production Branch
