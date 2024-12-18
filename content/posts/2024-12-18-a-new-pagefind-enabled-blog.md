@@ -95,8 +95,11 @@ ignoreLogs = ['warning-goldmark-raw-html']
 ERROR deprecated: .Site.Social was deprecated in Hugo v0.124.0 and will be removed in Hugo 0.141.0. Implement taxonomy 'social' or use .Site.Params.Social instead.
 ```
 
+This [post](https://stackoverflow.com/a/5542964) was very helpful for working with my submodule theme!  
 
+# Success!
 
+Well, somewhat.  My site at https://ashy-rock-0f18efc0f.4.azurestaticapps.net/ is visible now, but the theme isn't right.  I suspect that is because my `hugo.yml` file still sets the `baseURL` to "https://blog.summittdweller.com" and we are not quite there yet.  Setting the `baseURL` to "https://ashy-rock-0f18efc0f.4.azurestaticapps.net/" and let's see what happens...  
 
 > What follows is obsolete, it's from `npm-rootstalk`, and does NOT apply to this blog!
 
