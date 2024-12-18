@@ -1,4 +1,4 @@
-baseURL: 'https://blog.summittdweller.com'
+# baseURL: 'https://blog.summittdweller.com'
 # baseURL: 'https://ashy-rock-0f18efc0f.4.azurestaticapps.net/'
 title: Summitt Dweller's Blog
 languageCode: en
