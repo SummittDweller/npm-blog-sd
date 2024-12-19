@@ -9,7 +9,7 @@ tags:
   - Hugo
   - npm
   - Pagefind
-hero_image: /images/Z1goLNa-photo-1587539963986-8a74135821d4.jpg
+hero_image: https://summittservices.blob.core.windows.net/summitt-dweller-blog/images/search-6821469_640.jpg
 ---
 
 So, `node` and `npm` are maybe not "all the rage" these days, but they do the job nicely for me.
@@ -108,7 +108,7 @@ This [post](https://stackoverflow.com/a/5542964) was very helpful for working wi
 
 # Success!
 
-Well, somewhat.  My site at https://ashy-rock-0f18efc0f.4.azurestaticapps.net/ is visible now, but the theme isn't right.  I suspect that is because my `hugo.yml` file still sets the `baseURL` to "https://blog.summittdweller.com" and we are not quite there yet.  Setting the `baseURL` to "https://ashy-rock-0f18efc0f.4.azurestaticapps.net/" and let's see what happens...  **Bingo!**   Now, I just need to add a search bar to expose the Pagefind results.   
+Well, somewhat.  My site at https://ashy-rock-0f18efc0f.4.azurestaticapps.net/ is visible now, but the theme isn't right.  I suspect that is because my `hugo.yml` file still sets the `baseURL` to "https://blog.summittdweller.com" and we are not quite there yet.  Setting the `baseURL` to "https://ashy-rock-0f18efc0f.4.azurestaticapps.net/" and let's see what happens...  **Bingo!**   Now, I just need to add a search bar to expose the Pagefind results.   Done!
 
 {{< attention-box "What follows is obsolete, it's from `npm-rootstalk`, and does NOT apply to this blog!" >}}
 
