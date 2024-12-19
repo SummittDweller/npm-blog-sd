@@ -102,6 +102,11 @@ menu:
       url: /mackenzie-posts/
       weight: 20
       pre: <i class="bi bi-file-earmark-person"></i>
+    - identifier: "timeline"
+      name: "Timeline"
+      url: "/timeline/"
+      weight: 35
+      pre: <i class="bi bi-calendar2-range"></i>  
 
   footer:
     - identifier: about
@@ -144,3 +149,12 @@ services:
     disableInlineCSS: true
   twitter:
     disableInlineCSS: true
+
+# module:
+#   imports:
+#     - path: github.com/SummittDweller/hugo-timeline
+#       mounts:
+#       - source: layouts
+#         target: layouts
+#       - source: static
+#         target: static
